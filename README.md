@@ -12,7 +12,7 @@ This website was made for the Odin project. 🌀
 
 ## Demo
 
-you can try the game here : [HERE]([https://franco-rps-game.netlify.app](https://franco-rpsgame.netlify.app))
+you can try the game here : ( https://franco-rpsgame.netlify.app )
 
 ## Authors
 
