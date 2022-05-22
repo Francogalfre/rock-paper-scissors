@@ -85,3 +85,57 @@ body {
     font-weight: 400;
     margin-bottom: 10px;
 }
+    
+@media screen and (max-width: 520px) {
+    .container {
+        min-width: 300px;
+        padding: 0 10px;
+    }
+
+    .weapons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weapons button {
+        justify-content: center;
+        margin: 5px;
+    }
+
+    .scores {
+        padding-top: 20px;
+        padding-right: 10px;
+        margin-bottom: 1px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        min-width: 200px;
+        padding: 0 10px;
+    }
+
+    .weapons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weapons button {
+        justify-content: center;
+        margin: 5px;
+        height: 80px;
+        width: 80px;
+    }
+
+    .scores {
+        padding-top: 20px;
+        padding-right: 10px;
+        margin-bottom: 3px;
+    }
+
+    .details {
+        font-size: 14px;
+    }
+}
