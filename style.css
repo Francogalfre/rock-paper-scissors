@@ -71,3 +71,17 @@ body {
     font-weight: 400;
     font-size: 15px;
 }
+
+#result {
+    width: 180px;
+    padding: 10px 0;
+    margin: 30px auto;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#user_choice,
+#computer_choice {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
