@@ -12,7 +12,7 @@ This website was made for the Odin project. 🌀
 
 ## Demo
 
-you can try the game here : ( https://francogalfre-rock-paper-scissor.netlify.app )
+you can try the game here : ( franco-rps-game.netlify.app )
 
 ## Authors
 
