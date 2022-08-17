@@ -9,11 +9,7 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(
-        135deg, 
-        rgba(14, 196, 246, 1) 0%,
-        rgba(70, 145, 252, 1) 100%
-    );
+    background: linear-gradient( 135deg, rgba(14, 196, 246, 1) 0%,rgba(70, 145, 252, 1) 100%);
 }
 
 .container {
@@ -92,8 +88,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-#user_choice,
-#computer_choice {
+#user_choice, #computer_choice {
     font-weight: 400;
     margin-bottom: 10px;
 }

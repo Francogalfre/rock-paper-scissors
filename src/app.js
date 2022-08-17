@@ -1,6 +1,13 @@
+// Result HTML
+let result_reft = document.getElementById("result")
+
 // Score
 let computer_score = localStorage.getItem("computer_score") || 0;
 let user_score = localStorage.getItem("user_score") || 0;
+
+// Local Storage to keep score
+localStorage.setItem("computer_score", computer_score);
+localStorage.setItem("user_score", user_score);
 
 // Reset Button
 let reset_btn = document.getElementById("reset-btn");
@@ -18,12 +25,6 @@ document.getElementById("computer_score").innerHTML =
 document.getElementById("user_score").innerHTML =
     ` ${user_score} `
 
-// Local Storage to keep score
-localStorage.setItem("computer_score", computer_score);
-localStorage.setItem("user_score", user_score);
-
-let result_reft = document.getElementById("result")
-
 // Object of choices
 let choices_object = {
     'rock' : {
@@ -31,11 +32,13 @@ let choices_object = {
         'scissor' : 'win',
         'paper' : 'lose'
     },
+
     'scissor' : {
         'rock' : 'lose',
         'scissor' : 'draw',
         'paper' : 'win'
     },
+    
     'paper' : {
         'rock' : 'win',
         'scissor' : 'lose',
@@ -50,11 +53,11 @@ function checker(input) {
 
     // Computer move
     document.getElementById("comp_choice").innerHTML = 
-    ` Computer choose <span>${choices[num].toUpperCase()}</span>; ` 
+    ` Computer choose <span> ${choices[num].toUpperCase()} </span>; ` 
 
     // Player move
     document.getElementById("user_choice").innerHTML = 
-    ` You choose <span>${input.toUpperCase()}</span>`
+    ` You choose <span> ${input.toUpperCase()} </span>`
 
     let computer_choice = choices[num];
 
