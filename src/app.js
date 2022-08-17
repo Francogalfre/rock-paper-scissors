@@ -1,7 +1,30 @@
 // Score
-let [computer_score, user_score] = [0, 0];
+let computer_score = localStorage.getItem("computer_score") || 0;
+let user_score = localStorage.getItem("user_score") || 0;
+
+// Reset Button
+let reset_btn = document.getElementById("reset-btn");
+
+// Reset the game
+reset_btn.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload();
+}) 
+
+//  Initialize the scores
+document.getElementById("computer_score").innerHTML =
+    ` ${computer_score} `
+
+document.getElementById("user_score").innerHTML =
+    ` ${user_score} `
+
+// Local Storage to keep score
+localStorage.setItem("computer_score", computer_score);
+localStorage.setItem("user_score", user_score);
 
 let result_reft = document.getElementById("result")
+
+// Object of choices
 let choices_object = {
     'rock' : {
         'rock' : 'draw',
@@ -22,8 +45,8 @@ let choices_object = {
 
 // Generate random computer moves
 function checker(input) {
-    var choices = ["rock", "paper", "scissor"];
-    var num = Math.floor(Math.random() * 3);
+    var choices = ["rock", "paper", "scissor"]; // Array of choices
+    var num = Math.floor(Math.random() * 3); 
 
     // Computer move
     document.getElementById("comp_choice").innerHTML = 
@@ -31,7 +54,7 @@ function checker(input) {
 
     // Player move
     document.getElementById("user_choice").innerHTML = 
-    ` You choose <span>${input.toUpperCase()}</span>` 
+    ` You choose <span>${input.toUpperCase()}</span>`
 
     let computer_choice = choices[num];
 
@@ -40,11 +63,19 @@ function checker(input) {
             result_reft.style.cssText = "background-color: #cefdce; color: #689f38"
             result_reft.innerHTML = "YOU WIN!";
             user_score++
+
+            // Local Storage User Score
+            localStorage.setItem("user_score", user_score);
+
             break;
         case 'lose':
             result_reft.style.cssText = "background-color: #ffdde0; color: #d32f2f"
             result_reft.innerHTML = "YOU LOSE";
             computer_score++
+
+            // Local Storage User Score
+            localStorage.setItem("computer_score", computer_score);
+
             break;
         default:
             result_reft.style.cssText = "background-color: #e5e5e5; color: #808080"
