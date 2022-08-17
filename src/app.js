@@ -58,7 +58,9 @@ function checker(input) {
 
     let computer_choice = choices[num];
 
+    // Game Logic
     switch(choices_object[input][computer_choice]) {
+        // Win
         case 'win':
             result_reft.style.cssText = "background-color: #cefdce; color: #689f38"
             result_reft.innerHTML = "YOU WIN!";
@@ -68,6 +70,7 @@ function checker(input) {
             localStorage.setItem("user_score", user_score);
 
             break;
+        // Lose
         case 'lose':
             result_reft.style.cssText = "background-color: #ffdde0; color: #d32f2f"
             result_reft.innerHTML = "YOU LOSE";
@@ -77,6 +80,7 @@ function checker(input) {
             localStorage.setItem("computer_score", computer_score);
 
             break;
+        // Draw
         default:
             result_reft.style.cssText = "background-color: #e5e5e5; color: #808080"
             result_reft.innerHTML ="DRAW";
